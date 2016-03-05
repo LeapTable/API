@@ -9,11 +9,12 @@ Page::Page(std::string filePath)
 
 Page::~Page()
 {
+
 }
 
 void Page::Init()
 {
-	_listObject->Add(new UIButton("buttonTest", 20, 20, 300, 150));
+	_listObject->Add(new UIButton("buttonTest", 20, 20, 300, 150, 0xffff0000, 0xff00ff00, 0xff0000ff, "ButtonOne"));
 	_listObject->Add(new UIButton("buttonTest2", 20, 300, 300, 150));
 }
 
