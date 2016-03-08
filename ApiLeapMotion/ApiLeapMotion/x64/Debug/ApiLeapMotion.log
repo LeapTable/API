@@ -1,20 +1,29 @@
-﻿Build started 3/4/2016 2:38:30 PM.
+﻿Build started 3/8/2016 4:08:14 PM.
      1>Project "E:\Project\GitHub\LeapTable\API\ApiLeapMotion\ApiLeapMotion\ApiLeapMotion.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"..\..\SFML-2.3\include" /Zi /nologo /W3 /WX- /sdl /Od /D SMLF_STATIC /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"x64\Debug\ApiLeapMotion.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt ApiLeapMotion.cpp Controller.cpp Core.cpp Page.cpp UIButton.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IE:\Project\GitHub\LeapTable\API\ApiLeapMotion\packages\tinyxml2.3.0.0\build\native\../..//build/native/include/ /I"..\..\SFML-2.3\include" /Zi /nologo /W3 /WX- /sdl /Od /D SMLF_STATIC /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"x64\Debug\ApiLeapMotion.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IE:\Project\GitHub\LeapTable\API\ApiLeapMotion\packages\tinyxml2.3.0.0\build\native\../..//build/native/include/ /I"..\..\SFML-2.3\include" /Zi /nologo /W3 /WX- /sdl /Od /D SMLF_STATIC /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"x64\Debug\ApiLeapMotion.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt ApiLeapMotion.cpp CallBack.cpp CallBackListener.cpp Controller.cpp Core.cpp Page.cpp UIButton.cpp UIObject.cpp UIObjectList.cpp UIWindow.cpp WindowXMlReader.cpp
+         WindowXMlReader.cpp
+     1>WindowXMlReader.cpp(59): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         UIWindow.cpp
+         UIObjectList.cpp
+         UIObject.cpp
          UIButton.cpp
-     1>UIButton.cpp(30): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>UIButton.cpp(35): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
          Page.cpp
-         Generating Code...
-         Compiling...
-         ApiLeapMotion.cpp
-         Generating Code...
-         Skipping... (no relevant changes detected)
          Core.cpp
          Controller.cpp
+         CallBackListener.cpp
+         CallBack.cpp
+         ApiLeapMotion.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /IE:\Project\GitHub\LeapTable\API\ApiLeapMotion\packages\tinyxml2.3.0.0\build\native\../..//build/native/include/ /nologo /fo"x64\Debug\ApiLeapMotion.res" ApiLeapMotion.rc 
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Project\GitHub\LeapTable\API\ApiLeapMotion\x64\Debug\ApiLeapMotion.exe" /INCREMENTAL /NOLOGO /LIBPATH:"..\..\SFML-2.3\lib" "sfml-graphics.lib" "sfml-window.lib" "sfml-system.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Project\GitHub\LeapTable\API\ApiLeapMotion\x64\Debug\ApiLeapMotion.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Project\GitHub\LeapTable\API\ApiLeapMotion\x64\Debug\ApiLeapMotion.lib" /MACHINE:X64 x64\Debug\ApiLeapMotion.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Project\GitHub\LeapTable\API\ApiLeapMotion\x64\Debug\ApiLeapMotion.exe" /INCREMENTAL /NOLOGO /LIBPATH:"..\..\SFML-2.3\lib" E:\Project\GitHub\LeapTable\API\ApiLeapMotion\packages\tinyxml2.3.0.0\build\native\../..//build/native/lib/x64\v120\Debug\dynamic\tinyxml2.lib "sfml-graphics.lib" "sfml-window.lib" "sfml-system.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Project\GitHub\LeapTable\API\ApiLeapMotion\x64\Debug\ApiLeapMotion.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Project\GitHub\LeapTable\API\ApiLeapMotion\x64\Debug\ApiLeapMotion.lib" /MACHINE:X64 x64\Debug\ApiLeapMotion.res
+         x64\Debug\ApiLeapMotion.obj
+         x64\Debug\CallBack.obj
+         x64\Debug\CallBackListener.obj
          x64\Debug\Controller.obj
          x64\Debug\Core.obj
          x64\Debug\Page.obj
@@ -23,9 +32,10 @@
          x64\Debug\UIObject.obj
          x64\Debug\UIObjectList.obj
          x64\Debug\UIWindow.obj
+         x64\Debug\WindowXMlReader.obj
          ApiLeapMotion.vcxproj -> E:\Project\GitHub\LeapTable\API\ApiLeapMotion\x64\Debug\ApiLeapMotion.exe
      1>Done Building Project "E:\Project\GitHub\LeapTable\API\ApiLeapMotion\ApiLeapMotion\ApiLeapMotion.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.40
+Time Elapsed 00:00:05.59

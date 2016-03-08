@@ -4,22 +4,31 @@
 
 #include "UIObjectList.h"
 #include "UIButton.h"
+#include "CallBackListener.h"
 
 class Page
 {
 private:
-	UIObjectList *_listObject;
+	sf::RectangleShape	*background;
+	UIObjectList		*_listObject;
 	std::string			_tag;
 
 public:
-	Page(std::string filePath = "");
+	Page();
 	~Page();
 
 
-	void Init();
+	void Init(float x, float y, CallBackListener *callBackListener);
 	void Draw(sf::RenderWindow *window);
-	UIObject *GetObjectOnFocus(sf::Event *event);
+	void OnWindowSizeChange(float x, float y);
 
+	void	AddElement(UIObject *object);
+
+	UIObject *GetObjectOnFocus(sf::Event *event);
+	UIObject *GetObjectOnClick(sf::Event *event);
+
+	UIObjectList	*GetObjectList();
+	void SetObjectList(UIObjectList *obj);
 	std::string getTag() const;
 };
 

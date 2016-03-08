@@ -1,0 +1,3 @@
+<Window Title="Hello World">
+    <Page File="PageOne.xml" Tag="PageOne" IsFirst="True"/>
+</Window>

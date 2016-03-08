@@ -7,15 +7,21 @@ UIObject::UIObject()
 	, _posY(0)
 	, _height(0)
 	, _width(0)
+	, _isFocus(false)
+	, _isClick(false)
+	, _UIPropChanged(false)
 {
 
 }
-UIObject::UIObject(std::string Tag, int PosX, int PosY, int Height, int Weight)
+UIObject::UIObject(std::string Tag, float PosX, float PosY, float Height, float Weight)
 	: _tag(Tag)
 	, _posX(PosX)
 	, _posY(PosY)
 	, _height(Height)
 	, _width(Weight)
+	, _isFocus(false)
+	, _isClick(false)
+	, _UIPropChanged(false)
 {
 }
 
@@ -26,28 +32,41 @@ UIObject::~UIObject()
 }
 
 
-bool	UIObject::OnFocus(sf::Event *event)
-{
-	if (event->mouseMove.x > _posX && event->mouseMove.x < _posX + _width)
-	{
-		if (event->mouseMove.y > _posY && event->mouseMove.y < _posY + _height)
-			return true;
-	}
-	return false;
-}
 
-int UIObject::getHeight() const {
+float UIObject::getHeight() const {
 	return _height;
 }
 
-int UIObject::getWidth() const {
+float UIObject::getWidth() const {
 	return _width;
 }
 
-int UIObject::getPosX() const {
+float UIObject::getPosX() const {
 	return _posX;
 }
 
-int UIObject::getPosY() const {
+float UIObject::getPosY() const {
 	return _posY;
+}
+
+std::string UIObject::getTag() const{
+	return _tag;
+}
+
+void	UIObject::setPosX(float value){
+	_posX = value;
+	 _UIPropChanged = true;
+
+}
+void	UIObject::setPosY(float value){
+	_posY = value;
+	_UIPropChanged = true;
+}
+void	UIObject::setHeight(float value){
+	_height = value;
+	_UIPropChanged = true;
+}
+
+void	UIObject::setWitdh(float value){
+	_width = value;
 }

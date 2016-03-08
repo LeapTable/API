@@ -10,30 +10,42 @@ class UIObject
 {
 protected:
 
-	int					_posX;
-	int					_posY;
+	float					_posX;
+	float					_posY;
 
-	int					_height;
-	int					_width;
-	std::string		_tag;
-
-
+	float					_height;
+	float					_width;
+	std::string			_tag;
+	bool				_isFocus;
+	bool				_isClick;
+	int					_scaleFocus;
+	bool				_UIPropChanged;
 public:
 	UIObject();
-	UIObject(std::string Tag, int PosX, int PosY, int Height, int width);
+	UIObject(std::string Tag, float PosX, float PosY, float Height, float width);
 	~UIObject();
 
-	virtual void OnClick() = 0;
-	virtual void OnFocus() = 0;
 
-	bool		OnClick(sf::Event *evevt);
-	bool		OnFocus(sf::Event *event);
+	float	getPosX() const;
+	float	getPosY() const;
+	float	getHeight() const;
+	float	getWidth() const;
+	
+	void	setPosX(float value);
+	void	setPosY(float value);
+	void	setHeight(float value);
+	void	setWitdh(float value);
 
-	int getPosX() const;
-	int getPosY() const;
-	int getHeight() const;
-	int getWidth() const;
+	std::string getTag() const;
 
+	virtual void Reset() = 0;
+	virtual void OnWindowsSizeChange(float x, float y) = 0;
 	virtual void Draw(sf::RenderWindow *windows) = 0;
+
+	virtual void OnClick(void *arg = NULL) = 0;
+	virtual void OnFocus(sf::RenderWindow *window) = 0;
+
+	virtual bool OnClick(sf::Event *event) = 0;
+	virtual bool OnFocus(sf::Event *event) = 0;
 };
 

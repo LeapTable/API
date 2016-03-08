@@ -1,6 +1,12 @@
 #pragma once
 
 union Color {
-	int Hexa;
-	char Deci[4];
+	unsigned int      c; 
+	struct argbTag
+	{
+		unsigned char b;
+		unsigned char g;
+		unsigned char r;
+		unsigned char a;
+	} argb;
 };

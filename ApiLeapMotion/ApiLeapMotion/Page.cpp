@@ -2,7 +2,7 @@
 #include "Page.h"
 
 
-Page::Page(std::string filePath)
+Page::Page()
 {
 	_listObject = new UIObjectList();
 }
@@ -12,14 +12,28 @@ Page::~Page()
 
 }
 
-void Page::Init()
+void Page::Init(float x, float y, CallBackListener *callBackListener)
 {
-	_listObject->Add(new UIButton("buttonTest", 20, 20, 300, 150, 0xffff0000, 0xff00ff00, 0xff0000ff, "ButtonOne"));
-	_listObject->Add(new UIButton("buttonTest2", 20, 300, 300, 150));
+	background = new sf::RectangleShape();
+	background->setSize(sf::Vector2f(x, y));
+	background->setFillColor(sf::Color(255, 255, 255,255));
+	_listObject->OnWindowsSizeChange(x, y);
+}
+
+void Page::AddElement(UIObject *obj)
+{
+	_listObject->Add(obj);
+}
+
+void Page::OnWindowSizeChange(float x, float y)
+{
+	background->setSize(sf::Vector2f(x, y));
+	_listObject->OnWindowsSizeChange(x, y);
 }
 
 void Page::Draw(sf::RenderWindow *window)
 {
+	window->draw(*background);
 	_listObject->Draw(window);
 }
 
@@ -31,4 +45,16 @@ std::string Page::getTag() const
 UIObject *Page::GetObjectOnFocus(sf::Event *event)
 {
 	return _listObject->GetObjectOnFocus(event);
+}
+
+UIObject *Page::GetObjectOnClick(sf::Event *event)
+{
+	return _listObject->GetObjectOnClick(event);
+}
+
+UIObjectList	*Page::GetObjectList(){
+	return _listObject;
+}
+void Page::SetObjectList(UIObjectList *obj){
+	_listObject = obj;
 }

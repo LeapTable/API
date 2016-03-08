@@ -16,8 +16,11 @@ public:
 
 	void Add(UIObject *newObject);
 	void Draw(sf::RenderWindow *windows);
-	
-	UIObject *GetObjectOnFocus(sf::Event *event);
+	void OnWindowsSizeChange(float x, float y);
 
+	UIObject *GetObjectOnFocus(sf::Event *event);
+	UIObject *GetObjectOnClick(sf::Event *event);
+
+	
 };
 
